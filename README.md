@@ -1,16 +1,19 @@
-# recipe_search
+# Recipe Search
 
-A new Flutter project.
+A Flutter application that allows users to search for recipes online. The app leverages various packages to provide an efficient and smooth experience.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Search for recipes by keyword
+- Display recipe details with images
+- Cache images to reduce data usage
+- Environment configuration for managing API keys
+- State management with `provider` for efficient data handling
 
-A few resources to get you started if this is your first Flutter project:
+## Packages Used
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **http**: For making HTTP requests to fetch recipes from an external API
+- **freezed**: For code generation of immutable classes and union types
+- **cached_network_image**: For efficient image loading and caching
+- **flutter_dotenv**: For managing environment variables securely
+- **provider**: For state management across the app
