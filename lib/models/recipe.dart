@@ -6,7 +6,7 @@ part 'recipe.g.dart';
 @freezed
 class Recipe with _$Recipe {
   const factory Recipe({
-    required String categoryId,
+    required int categoryId,
     required String categoryName,
     required String categoryUrl,
   }) = _Recipe;

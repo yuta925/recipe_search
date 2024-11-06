@@ -20,7 +20,7 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Recipe {
-  String get categoryId => throw _privateConstructorUsedError;
+  int get categoryId => throw _privateConstructorUsedError;
   String get categoryName => throw _privateConstructorUsedError;
   String get categoryUrl => throw _privateConstructorUsedError;
 
@@ -38,7 +38,7 @@ abstract class $RecipeCopyWith<$Res> {
   factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) then) =
       _$RecipeCopyWithImpl<$Res, Recipe>;
   @useResult
-  $Res call({String categoryId, String categoryName, String categoryUrl});
+  $Res call({int categoryId, String categoryName, String categoryUrl});
 }
 
 /// @nodoc
@@ -64,7 +64,7 @@ class _$RecipeCopyWithImpl<$Res, $Val extends Recipe>
       categoryId: null == categoryId
           ? _value.categoryId
           : categoryId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       categoryName: null == categoryName
           ? _value.categoryName
           : categoryName // ignore: cast_nullable_to_non_nullable
@@ -84,7 +84,7 @@ abstract class _$$RecipeImplCopyWith<$Res> implements $RecipeCopyWith<$Res> {
       __$$RecipeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String categoryId, String categoryName, String categoryUrl});
+  $Res call({int categoryId, String categoryName, String categoryUrl});
 }
 
 /// @nodoc
@@ -108,7 +108,7 @@ class __$$RecipeImplCopyWithImpl<$Res>
       categoryId: null == categoryId
           ? _value.categoryId
           : categoryId // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       categoryName: null == categoryName
           ? _value.categoryName
           : categoryName // ignore: cast_nullable_to_non_nullable
@@ -133,7 +133,7 @@ class _$RecipeImpl implements _Recipe {
       _$$RecipeImplFromJson(json);
 
   @override
-  final String categoryId;
+  final int categoryId;
   @override
   final String categoryName;
   @override
@@ -180,14 +180,14 @@ class _$RecipeImpl implements _Recipe {
 
 abstract class _Recipe implements Recipe {
   const factory _Recipe(
-      {required final String categoryId,
+      {required final int categoryId,
       required final String categoryName,
       required final String categoryUrl}) = _$RecipeImpl;
 
   factory _Recipe.fromJson(Map<String, dynamic> json) = _$RecipeImpl.fromJson;
 
   @override
-  String get categoryId;
+  int get categoryId;
   @override
   String get categoryName;
   @override

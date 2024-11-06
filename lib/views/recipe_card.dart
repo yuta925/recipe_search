@@ -7,23 +7,22 @@ class RecipeCard extends StatelessWidget {
 
   const RecipeCard({super.key, required this.recipe});
 
+  Future<void> _launchUrl() async {
+    final Uri url = Uri.parse(Uri.encodeFull(recipe.categoryUrl));
+      await launchUrl(url, mode: LaunchMode.externalApplication);
+      debugPrint('Could not launch URL: ${recipe.categoryUrl}');
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
         title: Text(recipe.categoryName),
-        subtitle: Text("カテゴリID: ${recipe.categoryId}"),
+        subtitle: Text("カテゴリID: ${recipe.categoryId.toString()}"),
         trailing: const Icon(Icons.arrow_forward),
-        onTap: () async {
-          final url = recipe.categoryUrl;
-          // ignore: deprecated_member_use
-          if (await canLaunch(url)) {
-            // ignore: deprecated_member_use
-            await launch(url);
-          } else {
-            throw 'Could not launch $url';
-          }
-        },
+        onTap: _launchUrl,  // タップしたときにURLを開く
       ),
     );
   }
